@@ -189,11 +189,12 @@ header {
 }
 
 .menu-contacts-tel {
-  font-weight: 700;
-  font-size: 36px;
+  font-weight: 500;
+  font-size: 26px;
   line-height: 1.11;
   letter-spacing: 0.02em;
   color: var(--accent-color);
+  text-transform: capitalize;
 }
 
 .menu-contacts-item:not(:last-child) {
@@ -443,6 +444,9 @@ header {
   padding-top: 96px;
   padding-bottom: 96px;
 }
+.foother .logo {
+  margin-bottom: 16px;
+}
 
 .foother-main {
   display: flex;
@@ -499,7 +503,7 @@ header {
 .foother-input {
   color: var(--hero-text);
   padding: 8px 16px;
-  width: 264px;
+  width: 93%;
   height: 40px;
   background-color: transparent;
   border: 1px solid var(--hero-text);
@@ -662,18 +666,19 @@ header {
   height: 100%;
   background-color: var(--backdrop);
   transition: opacity 250ms linear, visibility 250ms linear;
+  overflow: scroll;
 }
 
 /*            MODAL         */
 
 .modal {
-  width: 95%;
-
+  /* display: block; */
+  width: 95vw;
   min-height: 576px;
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, 0%) scale(1);
   background-color: var(--modal-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -803,7 +808,7 @@ header {
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  margin: 0 8px 24px 0;
+  margin-right: 8px;
   fill: transparent;
   transition-property: border-color;
   transition-duration: 250ms;
@@ -822,6 +827,7 @@ header {
 
 .modal-btn {
   margin-left: calc((100% - 169px) / 2);
+  margin-top: 24px;
   width: 169px;
   height: 56px;
   padding: 16px 32px;
@@ -839,6 +845,12 @@ header {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--hover-color);
+}
+@media screen and (min-width: 380px) {
+  .menu-contacts-tel {
+    font-weight: 600;
+    font-size: 32px;
+  }
 }
 
 /* -------------               428              ----------------- */
@@ -868,7 +880,14 @@ header {
     }
   }
   .company-values-list > .item {
-    max-width: 396px;
+    max-width: 398px;
+  }
+  .foother-input {
+    width: 398px;
+  }
+  .menu-contacts-tel {
+    font-weight: 700;
+    font-size: 36px;
   }
 }
 
@@ -1030,12 +1049,15 @@ header {
     flex-wrap: wrap;
     gap: 72px 24px;
   }
+  .foother-input {
+    min-width: 264px;
+  }
 
   .social-media {
     margin-bottom: 0;
   }
   .foother-main {
-    display: block;
+    align-items: start;
     margin-bottom: 0px;
     text-align: start;
   }
@@ -1046,6 +1068,7 @@ header {
   }
 
   .foother-form {
+    width: 264px;
     flex-direction: row;
     gap: 24px;
   }
@@ -1177,15 +1200,19 @@ header {
     padding-bottom: 120px;
   }
 
-  .foother {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  .foother-form {
+    width: 453px;
   }
 
   .foother-conteiner {
-    max-width: 1128px;
-    padding: 0 15px;
     display: flex;
     justify-content: space-between;
+    width: 1128px;
+    padding: 0 15px;
+  }
+
+  .foother {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
