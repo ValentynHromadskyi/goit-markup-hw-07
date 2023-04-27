@@ -864,13 +864,6 @@ header {
   .hero {
     background-image: var(--bg-gradient), url(../images/hero-bg-tab.jpg);
   }
-  .modal-input {
-    width: 360px;
-  }
-
-  .modal-coments {
-    width: 360px;
-  }
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
